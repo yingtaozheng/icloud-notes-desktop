@@ -1,0 +1,4 @@
+node_modules/
+dist/
+# Holds your Apple ID password - never commit it.
+config.json

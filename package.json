@@ -1,0 +1,36 @@
+{
+  "name": "icloud-notes-desktop",
+  "version": "1.0.0",
+  "description": "Windows desktop wrapper for iCloud Notes",
+  "main": "main.js",
+  "author": "Yingtao Zheng",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.yingtao.icloudnotes",
+    "productName": "iCloud Notes",
+    "files": [
+      "main.js",
+      "autofill.js",
+      "config.json",
+      "build/icon.png"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "iCloud Notes"
+    }
+  },
+  "devDependencies": {
+    "electron": "^44.7.0",
+    "electron-builder": "^26.15.3"
+  }
+}
